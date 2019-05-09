@@ -1,0 +1,68 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0 auto;
+  
+  }
+  
+  header, footer {
+    background-color: yellowgreen;
+    color: black;
+    line-height: 100px;
+    
+    text-align: center;
+  }
+  
+  .new-note, .note-display {
+    padding: 20px;
+    
+  }
+  
+  .new-note {
+    background: yellowgreen;
+    
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  .add__word {
+    font-size: 16px;
+    background-color: white;
+    border-radius: 0;
+    border: 1.7px solid black;
+    width: 100px;
+    cursor: pointer;
+    height: 24px;
+  }
+ 
+  input {
+    height:18px;
+    font-size:18px;
+    border: 1.7px solid black;
+  }
+  li button {
+    background-color: white;
+    border: 1.7px solid black;
+    cursor: pointer;
+    
+  }
+  .note-display ul {
+    display: flex;
+    flex-direction: row;
+   flex-wrap: wrap;
+    
+  }
+  ul li {
+    width:10%;
+  }

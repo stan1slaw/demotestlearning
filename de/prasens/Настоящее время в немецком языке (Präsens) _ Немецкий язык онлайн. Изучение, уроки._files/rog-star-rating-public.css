@@ -1,0 +1,20 @@
+.star-rating { position:relative; height: 40px; clear:both; margin-bottom:7px; padding-top:6px; }
+.star-rating .screen-reader-text{ clip:auto; width:auto; height:auto; font-size:13px; position:absolute; bottom:0; left:0; border: 0; white-space: nowrap; color:#666; }
+.star-rating .star-empty:before { content: "\f154"; }
+.star-rating .star-half:before { content: "\f459"; }
+.star-rating .star-full:before { content: "\f155"; }
+.star-rating .star {	color: #ffb900;	display: inline-block; font-family: dashicons; font-size: 20px;	font-style: normal; font-weight: 400; height: 20px; line-height: 1; text-align: center; text-decoration: inherit; vertical-align: top; width: 20px; }
+
+.singular-rating { min-height:40px; }
+.singular-rating .star-rating .star { cursor:pointer; }
+.star-rating .star.hover { color: #ff0000; }
+
+.rsr__cat-rating-data { margin-top:15px; }
+.rsr__cat-item{ color:#808080; }
+.rsr__cat-item .fa-star{ color:#ffb900; }
+.rsr__cat-item .fa-thumbs-o-up{ color:#3b5998; }
+.rsr__cat-item .fa-rub{ color:#588a2b; }
+
+.rsr__cat-num{ font-size:120%; font-weight:600; }
+
+.les-min-price { margin:15px 0; }

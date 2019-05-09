@@ -1,0 +1,2 @@
+(function(d,b){var e=document.getElementsByTagName("head")[0],a=document.createElement("script"),c=!1;a.src=d;a.async=!0;a.onload=a.onreadystatechange=function(){c||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState||(c=!0,"function"===typeof b&&b())};e.appendChild(a)})("//yastatic.net/share2/share.js",function(){Ya.share2("shareBlock",{theme:{services:"vkontakte,facebook,odnoklassniki,gplus,moimir,twitter"},hooks:{onready:function(){document.getElementById("shareWidget").style.display=
+"block"}}})});

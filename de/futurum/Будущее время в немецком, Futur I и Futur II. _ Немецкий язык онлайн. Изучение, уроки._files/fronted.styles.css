@@ -1,0 +1,25 @@
+.test-loop {}
+	.test-loop .testspl { padding:1em; border-bottom:1px solid rgba(153,153,153,1); }
+		.test-loop .testspl .subtitle{ color:#999; }
+		.test-loop .testspl .question-text{ padding:0.6em 0; }
+		.test-btn{ padding-top:2em; }
+		  
+.error.wn { color:red; margin-left:5em; position:relative; }
+.error.wn.no-ans { margin-left:0;}
+.error.wn:before { content:"x"; font-family:'Arial'; color:#fff; font-size:10px; background:red; border-radius:50%; line-height:1; padding:0 4px 2px; width:9px; height:9px; margin-right:1em; vertical-align: middle; }
+
+.sec-text { background-color:rgba(0,128,0,0.2); border-radius:10px; box-shadow: 0 0 5px rgba(153,153,153,0.15); padding:0.65em; font-size:0.813em; margin-top:0.5em; }
+
+.test-result { background: #fff; border-radius:10px; padding:1em; box-shadow: 0 0 6px rgba(70, 105, 145, 0.30); margin-bottom:2em; }
+	.test-result .res-img { text-align:center; }
+	.test-result img { margin:0 auto; max-width:100%;}
+	.test-result .result-text { padding-top:1em; }
+	
+	.test-result .shared-btn { padding-top:0.5em; margin-top:0.5em; border-top:1px solid rgba(153,153,153,1); }
+	.test-result .shared-btn a { text-decoration:none; }
+	.test-result .shared-text, .ya-share2 { display:inline-block; vertical-align:top; }
+	.test-result .shared-text { padding:0 10px 0 0; color:rgba(70,105,145,1); }
+	
+.answers div { padding:3px 0; margin:3px 0; }
+.answers div label { padding-left:5px; }
+.answers div label.successful:after { content:"\2714"; color:rgba(0,128,0,1); margin-left:5px; }

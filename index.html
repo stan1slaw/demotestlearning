@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Обучение</title>
+    <script>
+        function checkstatus() {
+
+    let logininput = document.getElementById('login').value;
+    let passwordinput = document.getElementById('password').value;
+    let login = localStorage.getItem('login');
+    let password = localStorage.getItem('password');
+    if ( login == logininput && password == passwordinput ) {
+     
+      location.replace("cabinet.html"); 
+    }
+    else {
+      alert('Такого аккаунта нет');
+    }
+    }
+   </script>
+   <script>
+   register = () => {
+    let login = document.getElementById('loginreg').value;
+    let password = document.getElementById('passwordreg').value;
+    if ( login == '' || password == '') {
+       alert('Введите значение');
+    }
+       else {
+    localStorage.setItem('login',login);
+     localStorage.setItem('password',password);
+    
+    }
+   } </script>
+</head>
+    <body>      <div class="container">
+            <nav class="navbar navbar-expand navbar-dark " style="background-color:none;position:fixed;">  
+         
+                <div class="collapse navbar-collapse" id="navbarMenu">
+               <ul class="navbar-nav">
+              <li class="nav-item item ">
+                <a class="nav-link" href="LangS/index.html">Главная</a>
+              </li>
+              <li class="nav-item item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Наши языки
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="https://ru.wikipedia.org/wiki/Русский_язык">Русский</a>
+                  <a class="dropdown-item" href="https://ru.wikipedia.org/wiki/Английский_язык">English</a>
+                  <a class="dropdown-item" href="https://ru.wikipedia.org/wiki/Немецкий_язык">Deutsch</a>
+                </div>
+              </li>
+              <li class="nav-item item active">
+                <a class="nav-link" href="#">Обучение</a>
+              </li>
+              <li class="nav-item item">
+                <a class="nav-link" href="#">О нас</a>
+              </li>
+              <li class="nav-item item" data-toggle="#Modal">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Личный кабинет</a>
+                </li>
+                </ul>
+            
+            </div>
+             </nav>
+            </div>
+            <h1 class="header">
+                    Выберите язык и тему для изучения
+                   </h1>
+    <div class="search__input">
+    <select name="Язык" id='language' >
+            <option selected value="?">Выберите язык</option>
+            <option value="us">English</option>
+            <option value="de">Deutsch</option>
+            </select>
+            <select name="Задание" id="task" class="search__out">      
+            </select>
+            <button onclick="checkin()" class="search__out">Выбрать</button>
+
+        </div>
+            <div id="wrap">
+                <a href="pastsimple.html"> <div id="past" class="make" >
+                    <p>Past simple</p>
+                    <img src="img/eng.png" alt="" style="width:210px;height:150px;" class="line">
+                    
+                </div></a>
+                <a href="presentsimple.html"> <div id="present" class="make">
+                    <p>Present simple</p>
+                    <img src="img/eng.png" alt="" style="width:210px;height:150px;">
+                    
+                </div></a>
+               <a href="futuresimple.html"><div id="future" class="make">
+                        <p>Future simple</p>
+                    <img src="img/eng.png" alt="" style="width:210px;height:150px;">
+                </div></a>
+                <a href="de/prasens/prasens.html"><div id="prasens" class="make"><p>Prasens</p>
+                    <img src="img/de.jpg" alt="" style="width:210px;height:150px;">
+                </div>
+                </a>
+                <a href="de/perfecteoria/perfect.html"><div id="perfects" class="make"><p>Perfect</p>
+                    <img src="img/de.jpg" alt="" style="width:210px;height:150px;">
+                </div>
+                </a>
+                <a href="de/futurum/futurum.html">
+                <div id="futurum" class="make"><p>Futurum</p>
+                    <img src="img/de.jpg" alt="" style="width:210px;height:150px;">
+                </div></a>
+                <a href="wordseng.html">
+                  <div id="vocus" class="make"><p>Vocabulary words</p>
+                      <img src="img/eng.png" alt="" style="width:210px;height:150px;">
+                  </div></a>
+                  <a href="#">
+                      <div id="vocde" class="make"><p>Vokabeln</p>
+                          <img src="img/de.jpg" alt="" style="width:210px;height:150px;">
+                      </div></a>
+            </div> 
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    
+                    <div class="modal-body">
+                      <p class="text-center" style="font-size:40px;font-family: 'Oswald', sans-serif;">Вход</p>
+                      <input type="text" class="form-control ourfield" id="login" autofocus placeholder="Имя пользователя">
+                      <input type="password" class="form-control ourfield" id="password" placeholder="Пароль">
+                    </div>
+                    <div class="modal-footer">
+                      <div class="main_button">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#myModal2">Регистрация</button>
+                      <button type="button" class="btn btn-secondary" onclick="checkstatus()">Вход</button>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <p class="text-center" style="font-size:40px;font-family: 'Oswald', sans-serif;">Регистрация</p>
+                      <div class="modal-body">
+                          <input type="text" class="form-control ourfield" id="loginreg" autofocus placeholder="Имя пользователя">
+                          <input type="password" class="form-control ourfield" id="passwordreg" placeholder="Пароль">
+                      </div>
+                      <div class="modal-footer">
+                       
+                        <button type="button" class="btn btn-secondary" onclick="register()" data-dismiss="modal">Зарегистрироваться</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
